@@ -120,7 +120,7 @@ export default function svelte(options = {}) {
 	});
 
 	fixedOptions.format = 'es';
-	fixedOptions.shared = require.resolve(options.shared || 'svelte/shared.js');
+	fixedOptions.shared = (options.shared || 'svelte/shared.js');
 
 	// handle CSS extraction
 	if ('css' in options) {
